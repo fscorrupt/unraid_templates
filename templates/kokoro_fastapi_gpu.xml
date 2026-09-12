@@ -29,6 +29,10 @@
         <WebPage>https://github.com/nwithan8</WebPage>
     </Maintainer>
     <Changes>
+        ### 2026-09-12
+
+        Remove outdated variables
+
         ### 2026-05-25
 
         Update environmental variables
@@ -43,9 +47,7 @@
     </Changes>
     <ExtraParams>--gpus all</ExtraParams>
     <Config Name="Web UI Port" Target="8880" Default="8880" Mode="tcp" Description="Container Port: 8880" Type="Port" Display="always-hide" Required="true" Mask="false">8880</Config>
-    <Config Name="Download Model" Target="DOWNLOAD_MODEL" Default="true|false" Description="Download model on start" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-    <Config Name="App Data" Target="/app/api" Default="/mnt/user/appdata/kokoro-fastapi/data" Description="Path to the app data folder" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/kokoro-fastapi/data</Config>
-    <Config Name="Python Path" Target="PYTHONPATH" Default="/app:/app/api" Description="Python path environment variable" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app:/app/api</Config>
+    <Config Name="App Data" Target="/app/web" Default="/mnt/user/appdata/kokoro-fastapi/data" Description="Path to the app data folder" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/kokoro-fastapi/data</Config>
     <Config Name="Log Level" Target="API_LOG_LEVEL" Default="DEBUG" Description="Logging level for the API" Type="Variable" Display="advanced-hide" Required="true" Mask="false">DEBUG</Config>
     <Config Name="Use GPU" Target="USE_GPU" Default="true" Description="Enable GPU usage for PyTorch model inference" Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
     <Config Name="Python Unbuffered" Target="PYTHONUNBUFFERED" Default="1" Description="Set Python output to be unbuffered" Type="Variable" Display="advanced-hide" Required="true" Mask="false">1</Config>
